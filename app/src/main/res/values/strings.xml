@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Book</string>
+    <string name="sword">Слово</string>
+    <string name="strword">Перевод</string>
+    <string name="saddbut">Добавить</string>
+    <string name="schange">Изменить</string>
+</resources>
