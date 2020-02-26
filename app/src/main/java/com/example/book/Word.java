@@ -1,4 +1,4 @@
-package com.example.eugene.recycleviewapp;
+package com.example.book;
 
 public class Word {
 

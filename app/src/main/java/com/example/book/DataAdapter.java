@@ -1,13 +1,14 @@
 package com.example.book;
 
 import android.content.Context;
+
+
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.example.eugene.recycleviewapp.Word;
 
 import java.util.List;
 
@@ -20,8 +21,10 @@ class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         this.words = phones;
         this.inflater = LayoutInflater.from(context);
     }
+
+    @NonNull
     @Override
-    public DataAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public DataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = inflater.inflate(R.layout.trans_item, parent, false);
         return new ViewHolder(view);
@@ -43,8 +46,8 @@ class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         final TextView wordoView, wordtrView;
         ViewHolder(View view){
             super(view);
-            wordoView = (TextView) view.findViewById(R.id.wordo);
-            wordtrView = (TextView) view.findViewById(R.id.wordtr);
+            wordoView = view.findViewById(R.id.wordo);
+            wordtrView = view.findViewById(R.id.wordtr);
         }
     }
 }
