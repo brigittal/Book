@@ -7,8 +7,10 @@ tools:context=".MainActivity">
         android:id="@+id/menu_item"
         android:icon="@android:drawable/ic_input_add"
         android:orderInCategory="1"
-        android:showAsAction="ifRoom"
         android:title="@string/smenu"
         android:onClick="newWord"/>
+    <!--android:showAsAction="ifRoom"-->
+
+
 
 </menu>
