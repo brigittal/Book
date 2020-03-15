@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 @Entity //Аннотацией Entity нам необходимо пометить объект, который мы хотим хранить в базе данных.
 public class Word {
-    @PrimaryKey  //(autoGenerate = true) //Аннотацией PrimaryKey мы помечаем поле, которое будет ключом в таблице.
+    @PrimaryKey  (autoGenerate = true) //Аннотацией PrimaryKey мы помечаем поле, которое будет ключом в таблице.
     public int id;
 
     @ColumnInfo(name = "Слово")
