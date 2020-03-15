@@ -17,8 +17,8 @@ class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     private LayoutInflater inflater;
     private List<Word> words;
 
-    DataAdapter(Context context, List<Word> phones) {
-        this.words = phones;
+    DataAdapter(Context context, List<Word> words) {
+        this.words = words;
         this.inflater = LayoutInflater.from(context);
     }
 
@@ -26,15 +26,15 @@ class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     @Override
     public DataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = inflater.inflate(R.layout.trans_item, parent, false);
+        View view = inflater.inflate(R.layout.translate_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(DataAdapter.ViewHolder holder, int position) {
         Word word = words.get(position);
-        holder.wordoView.setText(word.getWordo());
-        holder.wordtrView.setText(word.getWordtr());
+        holder.original_wordView.setText(word.getOriginal_word());
+        holder.translate_wordView.setText(word.getTranslate_word());
     }
 
     @Override
@@ -43,11 +43,11 @@ class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        final TextView wordoView, wordtrView;
+        final TextView original_wordView, translate_wordView;
         ViewHolder(View view){
             super(view);
-            wordoView = view.findViewById(R.id.wordo);
-            wordtrView = view.findViewById(R.id.wordtr);
+            original_wordView = view.findViewById(R.id.original_word);
+            translate_wordView = view.findViewById(R.id.translate_word);
         }
     }
 }

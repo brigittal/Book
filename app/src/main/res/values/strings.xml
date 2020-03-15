@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Переводчик</string>
-    <string name="sword">Слово</string>
-    <string name="strword">Перевод</string>
-    <string name="saddbut">Добавить</string>
-    <string name="schange">Изменить</string>
-    <string name="smenu">Новое слово</string>
+    <string name="word">Слово</string>
+    <string name="translate">Перевод</string>
+    <string name="add">Добавить</string>
+    <string name="change">Изменить</string>
+    <string name="menu">Новое слово</string>
 
 </resources>

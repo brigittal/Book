@@ -7,17 +7,17 @@
     android:background="@drawable/backgroundadd"
     android:gravity="center"
     android:tileMode="repeat"
-    tools:context=".add">
+    tools:context=".AddActivity">
 
     <EditText
-        android:id="@+id/word"
+        android:id="@+id/add_word"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_normal"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
-        android:hint="@string/sword"
+        android:hint="@string/word"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -27,14 +27,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addbut" />
     <EditText
-        android:id="@+id/trword"
+        android:id="@+id/add_translate"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_normal"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
-        android:hint="@string/strword"
+        android:hint="@string/translate"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/word" />
+        app:layout_constraintTop_toBottomOf="@+id/add_word" />
 
     <Button
         android:id="@+id/addbut"
@@ -50,14 +50,21 @@
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_background"
-        android:text="@string/saddbut"
+        android:text="@string/add"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/add_translate" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

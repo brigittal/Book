@@ -1,30 +1,40 @@
 package com.example.book;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity //Аннотацией Entity нам необходимо пометить объект, который мы хотим хранить в базе данных.
 public class Word {
+    @PrimaryKey  //(autoGenerate = true) //Аннотацией PrimaryKey мы помечаем поле, которое будет ключом в таблице.
+    public int id;
 
-    private String wordo;
-    private String wordtr;
+    @ColumnInfo(name = "Слово")
+    public String original_word;
+    @ColumnInfo(name = "Перевод")
+    public String translate_word;
 
-    public Word(String wordo, String wordtr){
+    public Word(String original_word, String translate_word){
 
-        this.wordo=wordo;
-        this.wordtr = wordtr;
+        this.original_word=original_word;
+        this.translate_word = translate_word;
     }
 
-    public String getWordo() {
-        return this.wordo;
+    public String getOriginal_word() {
+        return this.original_word;
     }
 
-    public void setWordo(String wordo) {
-        this.wordo = wordo;
+    public void setOriginal_word(String original_word) {
+        this.original_word = original_word;
     }
 
-    public String getWordtr() {
-        return this.wordtr;
+    public String getTranslate_word() {
+        return this.translate_word;
     }
 
-    public void setWordtr(String wordtr) {
-        this.wordtr = wordtr;
+    public void setTranslate_word(String translate_word) {
+        this.translate_word = translate_word;
     }
+
 
 }

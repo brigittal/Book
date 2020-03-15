@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgroundchange"
     android:tileMode="repeat"
-    tools:context=".change">
+    tools:context=".ChangeActivity">
 
     <EditText
-        android:id="@+id/chword"
+        android:id="@+id/change_word"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_normal"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
-        android:hint="@string/sword"
+        android:hint="@string/word"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -27,14 +27,14 @@
         app:layout_constraintTop_toBottomOf="@+id/change" />
 
     <EditText
-        android:id="@+id/chtrword"
+        android:id="@+id/change_translate"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_normal"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
-        android:hint="@string/strword"
+        android:hint="@string/translate"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chword" />
+        app:layout_constraintTop_toBottomOf="@+id/change_word" />
 
     <Button
         android:id="@+id/change"
@@ -50,7 +50,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_background"
-        android:text="@string/schange"
+        android:text="@string/change"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
